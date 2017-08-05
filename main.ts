@@ -1,33 +1,14 @@
-// 12. Your First TypeScript Program
-// function log(message) {
-//   console.log(message);
-// }
 
-// var message = 'Hello World';
+let a: number;
+let b: boolean;
+let c: string;
+let d: any;
+let e: number[] = [1, 2, 3];
+let f: any[] = [1, true, 'a', false];
 
-// log(message);
+const RedColor = 0;
+const GreenColor = 1;
+const BlueColor = 2;
 
-
-
-// function doSomething() {
-//   for (var i = 0; i < 5; i++) {
-//     console.log(i);
-//   }
-
-//   console.log('Finally: ' + i);
-// }
-
-function doSomething() {
-  for (let i = 0; i < 5; i++) {
-    console.log(i);
-  }
-
-  console.log('Finally: ' + i);
-}
-
-doSomething();
-
-
-// Lesson:
-// use let instead of var
-// eventhought supported version is EcmaScript 5 that doesn't support "let", typescript still could translate let to var without causing error / stuck with our application (cannot be run)
+enum Color { Red = 0, Green = 1, Blue = 2, Purple = 3 }
+let backgroundColor = Color.Red;
