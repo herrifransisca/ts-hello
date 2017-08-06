@@ -1,5 +1,17 @@
-var log = function (message) {
-    console.log(message);
-};
-//shorter way, using ARROW FUNCTION (Lambda Expression in C#)
-var doLog = function (message) { return console.log(message); };
+var Point = (function () {
+    function Point() {
+    }
+    Point.prototype.draw = function () {
+        console.log('X: ' + this.x + ', Y: ' + this.y);
+    };
+    Point.prototype.getDistance = function (another) {
+        //...
+    };
+    return Point;
+}());
+// Object
+// let point: Point = new Point();
+var point = new Point(); // shorter way
+point.x = 1;
+point.y = 2;
+point.draw();
